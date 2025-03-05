@@ -12,15 +12,27 @@
 // export default App;
 
 //just seeing from attibuted then we will call form file
-import form from './Components/form';
+// import form from './Components/form';
+
+// function App() {
+
+//     return (
+//         <div>
+//             <form />
+//         </div>
+//     );
+// }
+
+// export default App;
+
+//now inputing calculation of celsius and Fehrenhite
+
+
+import calculator from './Components/calculator';
 
 function App() {
 
-    return (
-        <div>
-            <form />
-        </div>
-    );
+    return <calculator />;
 }
 
 export default App;
