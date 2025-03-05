@@ -5,34 +5,19 @@ const scaleNames = {
     F: 'fahrenheit',
 }
 
-export default class temperatureInput extends React.Component {
-    state = {
-        //   initial state temperature value is empty
-        temperature: '',
-    };
+export default function temperatureInput({ temperature, scale, ontemperaturechange }) {
 
-    ontemperaturechange = (e) => {
-        this.setState({
-            temperature: e.target.value,
-        });
-    };
+    return (
+        // The < fieldset > tag is used to group related elements in a form.
+        // The < fieldset > tag draws a box around the related elements.
 
-    render() {
-        //temperature value destructure 
-        const { temperature } = this.state;
-        const { scale } = this.props;
-        return (
-            // The < fieldset > tag is used to group related elements in a form.
-            // The < fieldset > tag draws a box around the related elements.
-            <div>
-                <fieldset>
-                    {/* The <legend> tag defines a caption for the <fieldset> element. */}
+        <fieldset>
+            {/* The <legend> tag defines a caption for the <fieldset> element. */}
 
-                    <legend>Enter temperature in {scaleNames[scale]}: </legend>
-                    <input type="text" value={temperature} onChange={this.ontemperaturechange} />
-                </fieldset>
+            <legend>Enter temperature in {scaleNames[scale]}: </legend>
+            <input type="text" value={temperature} onChange={(e) => ontemperaturechange(e, scale)} />
+        </fieldset>
 
-            </div>
-        );
-    }
+
+    );
 }
