@@ -118,7 +118,7 @@ class clock extends React.Component {
       </h1>
         {/*Just send it to the functions and receive the clock function into the shape.  */}
         {/* <Button change={() => this.handleClick('en-US')}>Click here</Button> */}
-        <Button change={this.handleClick} locale="en-US">Click here</Button>
+        <button change={this.handleClick} locale="en-US">Click here</button>
       </div>
       // aita onno vabe oh solve kora jay like jemon bind use korte pari
     );
