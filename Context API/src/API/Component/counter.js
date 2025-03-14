@@ -7,8 +7,9 @@ class counter extends React.Component {
     };
 
     incrementCount = () => {
-        this, this.setState((prevState) => ({ count: prevState.count + 1 }));
+        this.setState((prevState) => ({ count: prevState.count + 1 }));
     };
+
     render() {
 
         const { children } = this.props;

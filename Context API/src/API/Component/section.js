@@ -1,10 +1,10 @@
-import context from "./content";
+import content from "./content";
 
 export default function section() {
     return (
         <div>
             <h1>This is a section</h1>
-            <context />
+            <content />
         </div>
     );
 }
