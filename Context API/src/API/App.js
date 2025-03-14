@@ -23,7 +23,6 @@ export default class app extends React.Component {
                         <ClickCounter count={counter} incrementCount={incrementCount} />
                     )}
                 </counter>
-                <section theme={theme} />
                 {/* i will be provided the value into the prodiver function */}
                 {/* value first second brackt for dynamic value and second second brackt for theme value */}
                 <ThemeContext.provider value={{ theme: theme }}> <section /> </ThemeContext.provider>
