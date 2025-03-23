@@ -12,6 +12,7 @@ class mycomponent extends React.Component {
     componentDidMount() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
+        setInterval(this.tick, 1000); //for first time calling run timer
     }
     //then this function work for updating the value
     componentDidUpdate() {
