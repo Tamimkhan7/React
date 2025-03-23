@@ -12,12 +12,16 @@ class mycomponent extends React.Component {
     componentDidMount() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
-        setInterval(this.tick, 1000); //for first time calling run timer
+        this.interval = setInterval(this.tick, 1000); //for first time calling run timer
     }
     //then this function work for updating the value
     componentDidUpdate() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval); //ami interval function ta clear kore dilam
     }
 
     addclick = () => {
