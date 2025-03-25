@@ -1,6 +1,18 @@
 import style from './Assets/Css/logo.modde.Css';
+import { useState } from 'react';
 
 export default function Logo() {
+
+    const [glassColor, setGlesscolor] = useState('black');
+
+    // pickcolor randomly
+
+    const pickColorRandomly = () => {
+        const colors = ["red", "green", "yellow", "blue", "orange"];
+        const color = colors[Math.floor(Math.random() * colors.length())];
+        return color;
+    }
+
     return (
         <div className={style.logo}>
             <div className="hair">
@@ -12,8 +24,8 @@ export default function Logo() {
             </div>
 
             <div className={style.play}>
-                <button type="button" >Colorsize Glass</button>
-                <button type="button">Reset Glass</button>
+                <button type="button" onClick={() => setGlesscolor(pickColorRandomly)}>Colorsize Glass</button>
+                <button type="button" onClick={() => setGlesscolor('black')}>Reset Glass</button>
             </div>
         </div>
     );
