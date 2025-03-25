@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
 
-export default function LayoutComponentOne() {
+// akhn ami update size dile oh somossa nai, all working are correctly 
 
-    const [onSmallScreen, setOnSmallScreen] = useState(false);
+export default function LayoutComponentOne(onscreensize) {
 
-    const checkScreenSize = () => {
-        setOnSmallScreen(window.innerWidth < 768);
-    };
+    const onSmallScreen = useWindowWidth(700); //onSmallScreen useWindowWidth ar modde ace,,, oita just ami access korteci
 
-    useEffect(() => {
-        checkScreenSize();
-        // In JavaScript, addEventListener("resize", callbackFunction) attaches a callback function to the "resize" event on the window object, triggering the function whenever the browser window is resized
-        window.addEventListener("resize", checkScreenSize);
-
-        // now cleaning of the windows
-        return () => window.removeEventListener('resize', checkScreenSize);
-
-    }, []);
 
     return (
         <div>
