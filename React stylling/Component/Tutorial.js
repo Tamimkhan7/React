@@ -1,5 +1,5 @@
 import card from './card';
-import container from './container';
+import { container } from './styles/container.style';
 
 export default function Tutorial() {
     return (
