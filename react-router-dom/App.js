@@ -29,7 +29,7 @@ export default function App() {
                     {isLoggedIn ? <Redirect to="/dashboard" /> : <Home />}
                 </Route>
 
-        //error component must be last a th akbe
+        //error component must be last a thakbe
                 <Route Component={Error} />
             </Switch>
         </router >
