@@ -6,13 +6,15 @@ export default function Header() {
         <div>
             <ul>
                 <li>
-                    <NavLink to="/hello" activeClassName={classes.active}>
+                    {/* we can use link or we can use Navlink,, why we can use Navlink, just use for we doing styling this path*/}
+                    {/* If the function className is used, the link's active state is passed as a parameter. This is helpful if you want to exclusively apply a className to an inactive link */}
+                    <NavLink to="/hello" className={(navInfo) => (navInfo.isActive ? classes.active : "")} >
                         Home
                     </NavLink>
-                </li>
+                </li> 
 
                 <li>
-                    <NavLink to="/posts" activeClassName={classes.active}>
+                    <NavLink to="/posts" className={(navInfo) => (navInfo.isActive ? classes.active : "")}>
                         Posts
                     </NavLink>
                 </li>

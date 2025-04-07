@@ -12,10 +12,15 @@ function App() {
             <Header />
             <Routes>
                 {/* this is home page, by the way this is default page of the router */}
-                <Route path="/" >
-                    <Navigate to="/hello" />
-                </Route >
-                <Route path="/hello" element={<hello />} />
+                {/* there are no child element, there are only store the element in the parents element use element component */}
+                {/* if we use * of the given path it is call default path, if any path didn't match, default going below path */}
+                <Route path="/*" element={<Navigate to="/hello" />} />
+                {/* why use Navigate---  Because you can return or throw responses in loaders and actions, */}
+
+                <Route path="/hello/*" element={<hello />} >
+                    {/* akhn child hisabe use korte parbo */}
+                    <Route path="world" element={<p>This is World!</p>} />
+                </Route>
                 <Route path="/posts" element={<Posts />} />
                 <Route path="/posts/:postId" element={<Post />} />
 

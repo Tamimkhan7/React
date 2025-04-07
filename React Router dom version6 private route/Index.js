@@ -4,10 +4,7 @@ import React from "react";
 import App from "./App";
 import reportWebVitals from './reportWebVitals';
 
-
-// Create React App doesn't include page routing.
-// React Router is the most popular solution.
-
+// To maintain clean routes in a React application that use BrowserRouter
 ReactDOM.render(
     <BrowserRouter>
         <App />
